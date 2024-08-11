@@ -165,19 +165,19 @@
       <a href="#" class="nav-link text-light"><h4>Categories</h4></a>
     </li>
     <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand1</a>
+      <a href="#" class="nav-link text-light">Cat1</a>
     </li>
     <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand2</a>
+      <a href="#" class="nav-link text-light">cat2</a>
     </li>
     <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand3</a>
+      <a href="#" class="nav-link text-light">cat3</a>
     </li>
     <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand3</a>
+      <a href="#" class="nav-link text-light">cat4</a>
     </li>
     <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand5</a>
+      <a href="#" class="nav-link text-light">cat5</a>
     </li>
 
   </ul>  
