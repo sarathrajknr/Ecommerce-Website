@@ -1,3 +1,9 @@
+<!--connect file-->
+<?php  
+include('includes/connect.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +109,7 @@
     <a href="#" class="btn btn-secondary">View More</a>
   </div>
 </div></div>
-<div class="col-md-4"><div class="card">
+<div class="col-md-4 mb-2"><div class="card">
   <img src="./images/dairy1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -112,7 +118,7 @@
     <a href="#" class="btn btn-secondary">View More</a>
   </div>
 </div></div>
-<div class="col-md-4"><div class="card">
+<div class="col-md-4 mb-2"><div class="card">
   <img src="./images/dairy1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -121,7 +127,7 @@
     <a href="#" class="btn btn-secondary">View More</a>
   </div>
 </div></div>
-<div class="col-md-4"><div class="card">
+<div class="col-md-4 mb-2"><div class="card">
   <img src="./images/dairy1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -141,21 +147,25 @@
     <li class="nav-item bg-info">
       <a href="#" class="nav-link text-light"><h4>Delivery Brands</h4></a>
     </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand1</a>
-    </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand2</a>
-    </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand3</a>
-    </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand3</a>
-    </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Brand5</a>
-    </li>
+    <?php  
+    $select_brands="select * from `brands`";
+    $result_brands=mysqli_query($con,$select_brands);
+    // $row_data=mysqli_fetch_assoc($result_brands);
+    // echo $row_data['brand_title'];
+    // echo $row_data['brand_title'];
+    while($row_data=mysqli_fetch_assoc($result_brands)){
+      $brand_title=$row_data['brand_title'];
+      $brand_id=$row_data['brand_id'];
+      echo"<li class='nav-item'>
+      <a href='index.php?brand=$brand_id' class='nav-link text-light'>$brand_title</a>
+    </li>";
+
+    }
+
+
+   
+    ?>
+
 
   </ul>
 
@@ -164,21 +174,24 @@
     <li class="nav-item bg-info">
       <a href="#" class="nav-link text-light"><h4>Categories</h4></a>
     </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">Cat1</a>
-    </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">cat2</a>
-    </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">cat3</a>
-    </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">cat4</a>
-    </li>
-    <li class="nav-item ">
-      <a href="#" class="nav-link text-light">cat5</a>
-    </li>
+    <?php  
+    $select_categories="select * from `categories`";
+    $result_categories=mysqli_query($con,$select_categories);
+    // $row_data=mysqli_fetch_assoc($result_categories);
+    // echo $row_data['brand_title'];
+    // echo $row_data['brand_title'];
+    while($row_data=mysqli_fetch_assoc($result_categories)){
+      $category_title=$row_data['category_title'];
+      $category_id=$row_data['category_id'];
+      echo"<li class='nav-item'>
+      <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
+    </li>";
+
+    }
+
+
+   
+    ?>
 
   </ul>  
     
