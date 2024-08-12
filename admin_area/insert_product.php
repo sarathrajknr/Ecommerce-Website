@@ -1,3 +1,8 @@
+<?php 
+include('../includes/connect.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +41,22 @@
             <div class="form-outline mb-4 w-50 m-auto">
              <select name="product_categories" id="" class="form-select">
                 <option value="">Select a Category</option>
+                <?php 
+                      $select_query="Select * from `categories`";
+                      $result_query=mysqli_query($con,$select_query);
+                
+                
+
+
+
+
+                
+                ?>
+
+
+
+
+
                 <option value="">Category1</option>
                 <option value="">Category2</option>
                 <option value="">Category3</option>
