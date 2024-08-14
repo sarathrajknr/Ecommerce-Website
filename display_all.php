@@ -52,8 +52,8 @@ include('functions/common_function.php');
         
 
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-         <input type="submit" value="search" class="btn btn-outline-light" name="search_data_product">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
     </div>
   </div>
@@ -89,7 +89,7 @@ include('functions/common_function.php');
       <!-- calling function for products-->
           
           <?php 
-          getproducts();
+          get_all_products();
           get_unique_categories();
           get_unique_brands();
           ?>
@@ -142,10 +142,9 @@ include('functions/common_function.php');
 
 
 <!--Last child-->
-<!--include footer-->
-<?php 
-include("./includes/footer.php");
-?>
+<div class="bg-info p-3 text-center">
+  <p>All rights reserved © designed by Sarathraj 2024</p>
+</div>
     </div>
 
 
